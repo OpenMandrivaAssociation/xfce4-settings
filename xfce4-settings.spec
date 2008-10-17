@@ -1,7 +1,7 @@
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
 Version:	4.5.91
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://www.xfce.org
@@ -14,6 +14,14 @@ BuildRequires:	libglade2-devel
 BuildRequires:	libwnck-devel
 BuildRequires:	libxklavier-devel
 BuildRequires:	libxxf86misc-devel
+Obsoletes:	xfce-mcs-manager < 4.5
+Obsoletes:	xfce-mcs-manager-devel
+Obsoletes:	xfce-mcs-plugins < 4.5
+Obsoletes:	%{mklibname xfce4mcs 3}
+Obsoletes:	%{mklibname xfce4mcs 3 -d}
+Obsoletes:	%{mklibname xfce4mcs -d}
+Provides:	xfce-mcs-manager
+Provides:	xfce-mcs-plugins
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
