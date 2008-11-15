@@ -53,6 +53,7 @@ Configuration settings manager for Xfce.
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog NEWS TODO
+%exclude %{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
 %{_sysconfdir}/xdg/autostart/xfce4-settings-helper-autostart.desktop
 %{_bindir}/xfce4-*settings*
 %{_bindir}/xfsettingsd
