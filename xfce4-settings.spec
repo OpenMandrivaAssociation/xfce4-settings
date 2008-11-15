@@ -1,12 +1,12 @@
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.5.91
-Release:	%mkrel 3
+Version:	4.5.92
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://www.xfce.org
 Source0:	%{name}-%{version}.tar.bz2
-BuildRequires:	libxfcegui4-devel >= 4.5.91
+BuildRequires:	libxfcegui4-devel >= %{version}
 BuildRequires:	xfconf-devel
 BuildRequires:	exo-devel >= 0.3.91
 BuildRequires:	libnotify-devel
@@ -33,7 +33,10 @@ Configuration settings manager for Xfce.
 %build
 %configure2_5x \
 	--enable-sound-settings \
-	--enable-xsettings-daemon
+	--enable-xsettings-daemon \
+	--enable-libnotify \
+	--enable-xcursor \
+	--enable-libxklavier
 
 %make
 
