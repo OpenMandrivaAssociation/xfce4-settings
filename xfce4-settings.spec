@@ -8,7 +8,7 @@ Url:		http://www.xfce.org
 Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
 Patch0:		xfce4-settings-4.5.92-fix-desktop-entry.patch
 BuildRequires:	libxfcegui4-devel >= %{version}
-BuildRequires:	xfconf-devel
+BuildRequires:	xfconf-devel >= %{version}
 BuildRequires:	exo-devel >= 0.3.91
 BuildRequires:	libnotify-devel
 BuildRequires:	libglade2-devel
