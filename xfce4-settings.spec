@@ -1,19 +1,16 @@
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.6.0
-Release:	%mkrel 5
+Version:	4.6.1
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://www.xfce.org
 Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
 Patch0:		xfce4-settings-4.5.92-fix-desktop-entry.patch
 Patch1:		xfce4-settings-4.5.99.1-format_not_a_string_literal_and_no_format_arguments.patch
-Patch2:		xfce4-settings-4.6.0-screen-resolution-settings.patch
-Patch3:		xfce4-settings-4.6.0-do-not-set-keyboard-layout-by-default.patch
-Patch4:		xfce4-settings-4.6.0-use-folder-name-for-selecting-the-icon-and-theme-style.patch
-BuildRequires:	libxfcegui4-devel >= %{version}
-BuildRequires:	xfconf-devel >= %{version}
-BuildRequires:	exo-devel >= 0.3.91
+BuildRequires:	libxfcegui4-devel >= 4.6.0
+BuildRequires:	xfconf-devel >= 4.6.0
+BuildRequires:	exo-devel >= 0.3.100
 BuildRequires:	libnotify-devel
 BuildRequires:	libglade2-devel
 BuildRequires:	libwnck-devel
@@ -36,9 +33,6 @@ Configuration settings manager for Xfce desktop environment.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
 
 %build
 %configure2_5x \
