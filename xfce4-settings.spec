@@ -2,13 +2,12 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.6.4
-Release:	%mkrel 2
+Version:	4.6.5
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://www.xfce.org
 Source0:	http://archive.xfce.org/src/xfce/xfce4-settings/%{url_ver}/%{name}-%{version}.tar.bz2
-Patch: 		xfce4-settings-4.6.4-libxklavier5.0.patch
 Patch1:		xfce4-settings-4.5.99.1-format_not_a_string_literal_and_no_format_arguments.patch
 BuildRequires:	libxfcegui4-devel >= 4.6.0
 BuildRequires:	xfconf-devel >= 4.6.0
@@ -33,7 +32,6 @@ Configuration settings manager for Xfce desktop environment.
 
 %prep
 %setup -q
-%patch -p1
 %patch1 -p1
 
 %build
