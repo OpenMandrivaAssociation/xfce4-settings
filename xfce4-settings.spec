@@ -2,7 +2,7 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.7.4
+Version:	4.7.5
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -10,6 +10,7 @@ Url:		http://www.xfce.org
 Source0:	http://archive.xfce.org/src/xfce/xfce4-settings/%{url_ver}/%{name}-%{version}.tar.bz2
 Patch1:		xfce4-settings-4.5.99.1-format_not_a_string_literal_and_no_format_arguments.patch
 BuildRequires:	libxfce4ui-devel >= 4.6.0
+BuildRequires:	libxfcegui4-devel >= 4.7.0
 BuildRequires:	xfconf-devel >= 4.7.0
 BuildRequires:	exo-devel >= 0.5.4
 BuildRequires:	libnotify-devel
