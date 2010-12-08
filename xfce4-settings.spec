@@ -2,7 +2,7 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.7.5
+Version:	4.7.6
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
