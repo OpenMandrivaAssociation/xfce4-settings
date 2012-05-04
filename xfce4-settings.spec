@@ -8,10 +8,10 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://www.xfce.org
 Source0:	http://archive.xfce.org/src/xfce/xfce4-settings/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	libxfce4ui-devel >= 4.9.0
-BuildRequires:	libxfce4util-devel >= 4.9.0
-BuildRequires:	xfconf-devel >= 4.9.0
-BuildRequires:	exo-devel >= 0.7.2
+BuildRequires:	libxfce4ui-devel >= 4.10.0
+BuildRequires:	libxfce4util-devel >= 4.10.0
+BuildRequires:	xfconf-devel >= 4.10.0
+BuildRequires:	exo-devel >= 0.8.0
 BuildRequires:	libnotify-devel
 Buildrequires:	pkgconfig(garcon-1)
 BuildRequires:	libwnck-devel
