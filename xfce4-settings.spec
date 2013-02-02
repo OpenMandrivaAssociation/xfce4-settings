@@ -3,7 +3,7 @@
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
 Version:	4.10.0
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://www.xfce.org
@@ -51,7 +51,7 @@ Configuration settings manager for Xfce desktop environment.
 %makeinstall_std
 
 # (tpg) this file is in mandriva-xfce-config package
-#rm -rf %{buildroot}%{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+rm -rf %{buildroot}%{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
 
 %find_lang %{name} %{name}.lang
 
