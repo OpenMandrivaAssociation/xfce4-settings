@@ -59,7 +59,6 @@ rm -rf %{buildroot}%{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings
 %doc AUTHORS ChangeLog NEWS TODO
 %{_sysconfdir}/xdg/autostart/xfsettingsd.desktop
 %{_sysconfdir}/xdg/menus/xfce-settings-manager.menu
-%config(noreplace) %{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/*.xml
 %{_libdir}/xfce4/settings/appearance-install-theme
 %{_bindir}/xfce4-*settings*
 %{_bindir}/xfsettingsd
