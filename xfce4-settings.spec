@@ -2,21 +2,21 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.10.0
-Release:	5
+Version:	4.10.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://www.xfce.org
 Source0:	http://archive.xfce.org/src/xfce/xfce4-settings/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	libxfce4ui-devel >= 4.10.0
-BuildRequires:	libxfce4util-devel >= 4.10.0
-BuildRequires:	xfconf-devel >= 4.10.0
-BuildRequires:	exo-devel >= 0.8.0
-BuildRequires:	libnotify-devel
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.10.0
+BuildRequires:	pkgconfig(libxfce4util-1.0) >= 4.10.0
+BuildRequires:	pkgconfig(libxfconf-0) >= 4.10.0
+BuildRequires:	pkgconfig(exo-1) >= 0.8.0
+BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(garcon-1)
-BuildRequires:	libwnck-devel
-BuildRequires:	libxklavier-devel >= 5.0
-BuildRequires:	libxxf86misc-devel
+BuildRequires:	pkgconfig(libwnck-1.0)
+BuildRequires:	pkgconfig(libxklavier) >= 5.0
+BuildRequires:	pkgconfig(xxf86misc)
 Requires:	ldetect-lst
 Obsoletes:	xfce-mcs-manager < 4.5
 Obsoletes:	xfce-mcs-manager-devel
