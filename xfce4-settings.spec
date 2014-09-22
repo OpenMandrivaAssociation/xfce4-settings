@@ -63,3 +63,4 @@ rm -rf %{buildroot}%{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings
 %{_bindir}/xfce4-*settings*
 %{_bindir}/xfsettingsd
 %{_datadir}/applications/*.desktop
+%{_iconsdir}/hicolor/*/devices/*.png
