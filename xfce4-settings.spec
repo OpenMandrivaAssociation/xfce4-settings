@@ -2,15 +2,15 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.11.3
-Release:	1
+Version:	4.12.0
+Release:	0.1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://www.xfce.org
 Source0:	http://archive.xfce.org/src/xfce/xfce4-settings/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
-BuildRequires:	pkgconfig(libxfce4util-1.0) >= 4.11
-BuildRequires:	pkgconfig(libxfconf-0) >= 4.10.0
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.12
+BuildRequires:	pkgconfig(libxfce4util-1.0) >= 4.12
+BuildRequires:	pkgconfig(libxfconf-0) >= 4.12
 BuildRequires:	pkgconfig(exo-1) >= 0.8.0
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(garcon-1)
