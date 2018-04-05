@@ -1,8 +1,9 @@
-%define url_ver %(echo %{version} | cut -c 1-3)
+%define url_ver %(echo %{version} | cut -d. -f1,2)
+%define _disable_rebuild_configure 1
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.12.0
+Version:	4.12.3
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -61,6 +62,7 @@ rm -rf %{buildroot}%{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings
 %{_sysconfdir}/xdg/menus/xfce-settings-manager.menu
 %{_libdir}/xfce4/settings/appearance-install-theme
 %{_bindir}/xfce4-*settings*
+%{_bindir}/xfce4-find-cursor
 %{_bindir}/xfsettingsd
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/hicolor/*/devices/*.png
