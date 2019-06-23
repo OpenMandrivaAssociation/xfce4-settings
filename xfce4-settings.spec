@@ -3,58 +3,40 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.12.3
+Version:	4.12.4
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://www.xfce.org
 Source0:	http://archive.xfce.org/src/xfce/xfce4-settings/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.12
-BuildRequires:	pkgconfig(libxfce4util-1.0) >= 4.12
-BuildRequires:	pkgconfig(libxfconf-0) >= 4.12
-BuildRequires:	pkgconfig(exo-1) >= 0.8.0
-BuildRequires:	pkgconfig(libnotify)
+BuildRequires:  gtk-doc
+BuildRequires:  gtk-doc-mkpdf
+BuildRequires:  pkgconfig(dbus-glib-1)
+BuildRequires:	pkgconfig(exo-1)
+BuildRequires:  pkgconfig(fontconfig)
 BuildRequires:	pkgconfig(garcon-1)
-BuildRequires:	pkgconfig(libwnck-1.0)
-BuildRequires:	pkgconfig(libxklavier) >= 5.0
-BuildRequires:	pkgconfig(xxf86misc)
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(gtk+-2.0)
+BuildRequires:	pkgconfig(gio-2.0)
+BuildRequires:  pkgconfig(gio-unix-2.0)
+BuildRequires:  pkgconfig(inputproto)
+BuildRequires:	pkgconfig(libnotify)
+BuildRequires:  pkgconfig(libxfce4kbd-private-2)
+BuildRequires:	pkgconfig(libxfce4ui-1)
+BuildRequires:	pkgconfig(libxfce4util-1.0)
+BuildRequires:	pkgconfig(libxfconf-0)
+BuildRequires:	pkgconfig(libxklavier)
+BuildRequires:  pkgconfig(upower-glib)
+BuildRequires:  pkgconfig(x11)
+BuildRequires:  pkgconfig(xcursor)
+BuildRequires:  pkgconfig(xi)
+BuildRequires:  pkgconfig(xorg-libinput)
+BuildRequires:  pkgconfig(xrandr)
+BuildRequires:  xfce4-dev-tools
 Requires:	ldetect-lst
-Obsoletes:	xfce-mcs-manager < 4.5
-Obsoletes:	xfce-mcs-manager-devel
-Obsoletes:	xfce-mcs-plugins < 4.5
-Obsoletes:	%{mklibname xfce4mcs 3}
-Obsoletes:	%{mklibname xfce4mcs 3 -d}
-Obsoletes:	%{mklibname xfce4mcs -d}
-Provides:	xfce-mcs-manager = %{version}
-Provides:	xfce-mcs-plugins = %{version}
 
 %description
 Configuration settings manager for Xfce desktop environment.
-
-%prep
-%setup -q
-
-%build
-%configure \
-	--enable-pluggable-dialogs \
-	--enable-xrandr \
-	--enable-libnotify \
-	--enable-gio-unix \
-	--enable-xcursor \
-	--enable-libxklavier \
-	--enable-pluggable-dialogs \
-	--enable-sound-settings \
-	--with-pnp-ids-path=%{_datadir}/misc/pnp.ids
-
-%make
-
-%install
-%makeinstall_std
-
-# (tpg) this file is in mandriva-xfce-config package
-rm -rf %{buildroot}%{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-
-%find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog NEWS TODO
@@ -66,3 +48,32 @@ rm -rf %{buildroot}%{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings
 %{_bindir}/xfsettingsd
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/hicolor/*/devices/*.png
+
+#---------------------------------------------------------------------------
+
+%prep
+%setup -q
+%autopatch -p1
+
+%build
+%configure \
+	--enable-pluggable-dialogs \
+	--enable-xrandr \
+	--enable-libnotify \
+	--enable-gio-unix \
+	--enable-xcursor \
+	--enable-libxklavier \
+	--enable-pluggable-dialogs \
+	--enable-sound-settings \
+	--with-pnp-ids-path=%{_datadir}/misc/pnp.ids \
+	%{nil}
+%make_build
+
+%install
+%make_install
+
+# (tpg) this file is in mandriva-xfce-config package
+rm -rf %{buildroot}%{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+
+# locales
+%find_lang %{name} %{name}.lang

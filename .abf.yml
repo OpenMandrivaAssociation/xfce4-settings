@@ -1,4 +1,5 @@
 removed_sources:
   xfce4-settings-4.12.0.tar.bz2: 507a66ed160e44078f81051878c8644d5a5f344e
-sources:
   xfce4-settings-4.12.3.tar.bz2: a5da1248b17eb5eed02be281b938456de680472c
+sources:
+  xfce4-settings-4.12.4.tar.bz2: bc61d87d3998dcd9e8ee7e17995228b62a06cbca
