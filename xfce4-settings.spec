@@ -52,6 +52,7 @@ Configuration settings manager for Xfce desktop environment.
 %{_bindir}/xfsettingsd
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/hicolor/*/devices/*.png
+%{_iconsdir}/hicolor/*/apps/xfce4-color-settings.*
 
 #---------------------------------------------------------------------------
 
