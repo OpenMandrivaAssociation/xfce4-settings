@@ -3,7 +3,7 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.14.0
+Version:	4.14.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -12,17 +12,18 @@ Source0:	http://archive.xfce.org/src/xfce/xfce4-settings/%{url_ver}/%{name}-%{ve
 BuildRequires:  gtk-doc
 BuildRequires:  gtk-doc-mkpdf
 BuildRequires:  pkgconfig(dbus-glib-1)
-BuildRequires:	pkgconfig(exo-1)
+BuildRequires:	pkgconfig(exo-2)
+BuildRequires:	pkgconfig(colord)
 BuildRequires:  pkgconfig(fontconfig)
 BuildRequires:	pkgconfig(garcon-1)
-BuildRequires:  pkgconfig(glib-2.0)
-BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(gio-2.0)
-BuildRequires:  pkgconfig(gio-unix-2.0)
+BuildRequires:	pkgconfig(gio-unix-2.0)
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(inputproto)
 BuildRequires:	pkgconfig(libnotify)
-BuildRequires:  pkgconfig(libxfce4kbd-private-2)
-BuildRequires:	pkgconfig(libxfce4ui-1)
+BuildRequires:  pkgconfig(libxfce4kbd-private-3)
+BuildRequires:	pkgconfig(libxfce4ui-2)
 BuildRequires:	pkgconfig(libxfce4util-1.0)
 BuildRequires:	pkgconfig(libxfconf-0)
 BuildRequires:	pkgconfig(libxklavier)
@@ -34,6 +35,9 @@ BuildRequires:  pkgconfig(xorg-libinput)
 BuildRequires:  pkgconfig(xrandr)
 BuildRequires:  xfce4-dev-tools
 Requires:	ldetect-lst
+
+Recommends:	xfce4-screensaver
+Recommends:	xfce4-whiskermenu-plugin
 
 %description
 Configuration settings manager for Xfce desktop environment.
