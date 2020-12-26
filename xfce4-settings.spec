@@ -3,7 +3,7 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.14.3
+Version:	4.16.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -33,11 +33,16 @@ BuildRequires:  pkgconfig(xcursor)
 BuildRequires:  pkgconfig(xi)
 BuildRequires:  pkgconfig(xorg-libinput)
 BuildRequires:  pkgconfig(xrandr)
+BuildRequires:	intltool
 BuildRequires:  xfce4-dev-tools
 Requires:	ldetect-lst
 
 Recommends:	xfce4-screensaver
 Recommends:	xfce4-whiskermenu-plugin
+Recommends:	gnome-color-manager
+
+# Need import but enable it now to avoid needing rebuilding packages after adding it.
+Recommends:	xiccd
 
 %description
 Configuration settings manager for Xfce desktop environment.
@@ -46,13 +51,16 @@ Configuration settings manager for Xfce desktop environment.
 %doc AUTHORS ChangeLog NEWS TODO
 %{_sysconfdir}/xdg/autostart/xfsettingsd.desktop
 %{_sysconfdir}/xdg/menus/xfce-settings-manager.menu
+%{_sysconfdir}/xdg/xfce4/helpers.rc
 %{_libdir}/xfce4/settings/appearance-install-theme
+%{_libdir}/xfce4/xfce4-compose-mail
 %{_bindir}/xfce4-*settings*
 %{_bindir}/xfce4-find-cursor
 %{_bindir}/xfsettingsd
+%{_bindir}/xfce4-mime-helper
 %{_datadir}/applications/*.desktop
-%{_iconsdir}/hicolor/*/devices/*.png
-%{_iconsdir}/hicolor/*/apps/xfce4-color-settings.*
+%{_datadir}/icons/hicolor/*/*/*.{png,svg}
+%{_datadir}/xfce4/helpers/*
 
 #---------------------------------------------------------------------------
 
