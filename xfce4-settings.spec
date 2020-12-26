@@ -3,7 +3,7 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.14.3
+Version:	4.16.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -33,11 +33,16 @@ BuildRequires:  pkgconfig(xcursor)
 BuildRequires:  pkgconfig(xi)
 BuildRequires:  pkgconfig(xorg-libinput)
 BuildRequires:  pkgconfig(xrandr)
+BuildRequires:	intltool
 BuildRequires:  xfce4-dev-tools
 Requires:	ldetect-lst
 
 Recommends:	xfce4-screensaver
 Recommends:	xfce4-whiskermenu-plugin
+Recommends:	gnome-color-manager
+
+# Need import but enable it now to avoid needing rebuilding packages after adding it.
+Recommends:	xiccd
 
 %description
 Configuration settings manager for Xfce desktop environment.
