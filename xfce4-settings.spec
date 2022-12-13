@@ -51,7 +51,8 @@ Configuration settings manager for Xfce desktop environment.
 %doc AUTHORS ChangeLog NEWS TODO
 %{_sysconfdir}/xdg/autostart/xfsettingsd.desktop
 %{_sysconfdir}/xdg/menus/xfce-settings-manager.menu
-#{_sysconfdir}/xdg/xfce4/helpers.rc
+%{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+%{_sysconfdir}/xdg/xfce4/helpers.rc
 %{_libdir}/xfce4/settings/appearance-install-theme
 %{_libdir}/xfce4/xfce4-compose-mail
 %{_bindir}/xfce4-*settings*
