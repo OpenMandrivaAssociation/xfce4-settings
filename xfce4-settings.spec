@@ -3,12 +3,12 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.18.4
+Version:	4.18.6
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
-Url:		http://www.xfce.org
-Source0:	http://archive.xfce.org/src/xfce/xfce4-settings/%{url_ver}/%{name}-%{version}.tar.bz2
+Url:		https://www.xfce.org
+Source0:	https://archive.xfce.org/src/xfce/xfce4-settings/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:  gtk-doc
 BuildRequires:  gtk-doc-mkpdf
 BuildRequires:  pkgconfig(dbus-glib-1)
