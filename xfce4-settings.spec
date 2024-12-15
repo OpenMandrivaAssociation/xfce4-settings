@@ -3,7 +3,7 @@
 
 Summary:	Configuration settings manager for Xfce
 Name:		xfce4-settings
-Version:	4.18.6
+Version:	4.20.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -48,12 +48,13 @@ Recommends:	xiccd
 Configuration settings manager for Xfce desktop environment.
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog NEWS TODO
+%doc AUTHORS ChangeLog NEWS README*
 %{_sysconfdir}/xdg/autostart/xfsettingsd.desktop
 %{_sysconfdir}/xdg/menus/xfce-settings-manager.menu
 %{_sysconfdir}/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
 %{_sysconfdir}/xdg/xfce4/helpers.rc
 %{_libdir}/xfce4/settings/appearance-install-theme
+%{_libdir}/gtk-3.0/modules/libxfsettingsd-gtk-settings-sync.so
 %{_libdir}/xfce4/xfce4-compose-mail
 %{_bindir}/xfce4-*settings*
 %{_bindir}/xfce4-find-cursor
@@ -66,8 +67,7 @@ Configuration settings manager for Xfce desktop environment.
 #---------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 %configure \
@@ -79,8 +79,7 @@ Configuration settings manager for Xfce desktop environment.
 	--enable-libxklavier \
 	--enable-pluggable-dialogs \
 	--enable-sound-settings \
-	--with-pnp-ids-path=%{_datadir}/misc/pnp.ids \
-	%{nil}
+	--with-pnp-ids-path=%{_datadir}/misc/pnp.ids
 %make_build
 
 %install
